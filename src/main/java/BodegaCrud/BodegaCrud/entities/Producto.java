@@ -1,7 +1,6 @@
 
 package BodegaCrud.BodegaCrud.entities;
 
-import BodegaCrud.BodegaCrud.utilerias.Elaboracion;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,13 +17,14 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "nombre", nullable = false)
+    
+    @Column(name = "nombre", length = 60, nullable = false)
     private String nombre;
     
-    @Column(name = "codigo", nullable = false)
+    @Column(name = "codigo", nullable = false, length = 10)
     private String codigo;
     
-    @Column(name = "descripcion")
+    @Column(name = "descripcion", length = 150)
     private String descripcion;
     
     @Column(name = "precio_venta", nullable = false)
@@ -33,13 +33,13 @@ public class Producto {
     @Column(name = "stock", nullable = false)
     private int stock;      
     
-    @Column(name = "estado", nullable = false)
+    @Column(name = "estado", nullable = false, length = 2)
     private String estado;  
 
-    @Column(name = "tipo_elaborado", nullable = false)
+    @Column(name = "tipo_elaborado", nullable = false, length = 20)
     private String tipoElaborado;
     
-    @Column(name = "es_defectuoso", nullable = false)
+    @Column(name = "es_defectuoso", nullable = false, length = 2)
     private String esDefectuoso;
     
     @ManyToOne(fetch = FetchType.EAGER)    

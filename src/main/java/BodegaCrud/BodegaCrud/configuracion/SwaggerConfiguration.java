@@ -1,5 +1,5 @@
 
-package BodegaCrud.BodegaCrud.config;
+package BodegaCrud.BodegaCrud.configuracion;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
